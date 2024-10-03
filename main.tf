@@ -3,6 +3,7 @@ region = "us-east-1"
 }
 
 resource "aws_instance" "one" {
+  count         = 5
   ami           = "ami-04823729c75214919"
   instance_type = "t2.micro"
   key_name      = "dockerr"
