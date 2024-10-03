@@ -2,6 +2,17 @@ provider "aws" {
 region = "us-east-1"
 }
 
-resource "aws_iam_user" "user_one" {
-  name = "test-user"
+terraform {
+ backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "default"
+
+    workspaces {
+      name = "dummydel"
+    }
+  }
+}
+
+resource "aws_iam_user" "user_two" {
+  name = "abc-user"
 }
