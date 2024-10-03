@@ -9,6 +9,6 @@ resource "aws_instance" "one" {
   key_name      = "dockerr"
   vpc_security_group_ids = ["sg-05cfa7da6d7e8def3"]
   tags = {
-    Name = " dev-server"
+    Name = "test-server"
   }
 }
